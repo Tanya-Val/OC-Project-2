@@ -1,0 +1,938 @@
+/*Page style*/
+@import url('https://fonts.googleapis.com/css?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Raleway";
+    }
+
+    /*NAVIGATION SECTION*/
+nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2% 3% 2.5% 2.5%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Navigation section --> ICON*/
+nav img {
+    max-width: 100px;
+    height: auto;
+    position: relative;
+}
+
+/*Navigation section --> NAV BAR*/
+.nav_links ul{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+
+.nav_links ul li{
+    list-style: none;
+}
+
+.nav_links ul li a{
+    text-decoration: none;
+    color: black;
+    transition: 0.5s;
+    position: relative;
+    padding: 2px 15px;
+    margin: 0 10px;
+    width: 100%;
+    height: 100%;
+    border-top:none;
+    color: black;
+}
+
+.nav_links ul li a:hover{
+    border-top: 2px solid #0065fc;
+    padding-top: 42px;
+    color: #0065fc;
+}
+
+/*Navigation section --> Media for TABLET */
+@media (max-width:992px) and (min-width:768px){
+    .nav_links ul li a:hover{ 
+        padding-top: 28px;
+        border-top: 4px solid #0065fc;
+    } 
+}
+
+/*Navigation section --> Media for MOBILE*/
+@media (max-width:767px){
+    nav{
+        flex-direction: column;
+        gap: 30px;
+        padding: 5% 0 0 0;
+        align-items: stretch;
+        max-width: 400px;
+        margin-left: -15px;
+        box-sizing: border-box;
+    }
+
+    nav img {
+        justify-content: center;
+        align-items: center;
+        padding-left: 37%;
+     }
+
+    .nav_links ul{
+        padding-bottom: 15px;
+        border-bottom: solid  rgb(242, 243, 244);
+        justify-content: space-between;
+        max-width: 420px; 
+    }
+  
+    .nav_links ul li a{
+        padding: 0 45px;
+        margin: 0;
+    }
+
+    .nav_links ul li a:hover{
+        padding-top: 0;
+        padding-bottom: 15px;
+        border-top: none;
+        border-bottom: solid #0065fc;
+        color: #0065fc;
+    }
+}
+
+
+/*Header --> TEXT*/
+.header_text{
+    display: flex;
+    flex-direction: column;
+    padding-left: 4%;
+    width: 80%;
+}
+
+.header_text h3{
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/*Header TEXT -->  Media for MOBILE*/
+@media (max-width:767px){
+    .header_text{
+        padding: 7% 0 0 8%;
+        font-size: 18px;
+    }
+}
+
+/*Header --> SEARCH BTN*/
+.header_search{
+    padding:2% 0 0 4%;
+    position: relative;
+    max-width: 500px;
+}
+
+form{
+    display: flex;
+    display: inline-block;
+    position: relative;
+    align-items: baseline;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 15px;
+}
+
+#web_mob_pin_icon{
+    background-color: rgb(242, 243, 244);
+    width: 52px;
+    height: 36px;
+    padding-top: 15px;
+    margin-right: 10px;
+    border-radius: 15px 0 0 15px;
+    text-align: center;
+    font-size: large;
+}
+
+form input{
+    height: 35px;
+    width: 227px;
+    margin: 0 -5px 0 -4px;
+    border: none;
+    position: relative;
+}
+
+form input:focus { 
+    outline: none; 
+}
+
+#web_icon{
+    background-color: #0065fc;
+    border-radius: 0 15px 15px 0;
+    height: 50px;
+    width: 90px;
+    border: none;
+    color: white;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+
+#mob_icon{
+    display: none;
+}
+
+/*Header SEARCH BTN -->  Media for MOBILE*/
+@media (max-width:767px){
+    #web_icon{
+        display: none;
+    }
+    form{
+        margin-top: 5%;
+        margin-left: 4%;
+        box-shadow: none;
+        width: fit-content;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+
+    form input{
+        width: 200px;
+    }
+    #mob_icon{
+        display: inline-block;
+        background-color: #0065fc;
+        border-radius: 15px;
+        height: 50px;
+        width: 52px;
+        border: none;
+        color: white;
+        text-align: center;
+        position: relative;
+        cursor: pointer;
+    
+    }
+}
+
+/*Header --> FILTER BTN*/
+.header_btn{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2.5% 4%;
+    gap: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    align-items: center;
+}
+
+.header_btn button{
+    display: block;
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    background-color: white;
+    border-left: none;
+    border-right: 2px solid rgb(242, 243, 244);
+    border-top: 2px solid rgb(242, 243, 244);
+    border-bottom: 2px solid rgb(242, 243, 244);
+    border-radius: 50px;
+    padding-right: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.header_btn button:hover{
+    border-right: 2px solid #DEEBFF;
+    border-top: 2px solid #DEEBFF;
+    border-bottom: 2px solid #DEEBFF;
+    background-color: #DEEBFF;
+    color: #0065fc;
+}
+
+.header_btn button i {
+    color: #0065fc;
+    background-color:#DEEBFF;
+    height: 35px;
+    width: 50px;
+    border-radius: 50px;
+    padding-top: 15px;
+    margin-right: 15px;
+    text-align: center;
+}
+
+
+/*Header FILTER BTN --> Media for TABLET*/
+@media (max-width:992px) {
+    .header_btn {
+        font-size: 16px;
+        gap: 8px;
+    }
+
+    .header_btn button{
+        height: 80%;
+        padding-right: 12px;
+    }
+
+    .header_btn button i{
+        height: 28px;
+        width: 42px;
+        margin-right: 10px;
+        justify-content:center;
+    }
+}
+
+/*Header FILTER BTN --> Media for MOBILE*/
+@media (max-width:767px){
+    .header_btn{
+        padding: 5% 9% ;
+    }
+}
+
+/*Header --> INFO TEXT*/
+.header_info{
+    padding-left: 4%;
+    align-items: center;
+    position: relative;
+}
+
+.header_info i{
+    background-color: white;
+	border: 2px solid rgb(242, 243, 244);
+	border-radius: 50px;
+	color: #0065fc;
+	height: 15px;
+    width: 6px;
+    font-size: small;
+    padding: 3px 8px;
+    align-items: center;
+}
+
+/*Header INFO TEXT --> Media for MOBILE*/
+@media (max-width:767px){
+    .header_info{
+        padding: 0 5% 5% 9%;
+    }
+}
+
+
+/*MAIN --> ACCOMMODATION & MOST POPULAR*/
+/*Accommodation & Most Popular --> CONTAINER*/
+.most_popular_accommodation{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    position: relative;
+    padding: 3.5%;
+    gap: 3%;
+}
+
+/*Accommodation & Most Popular --> CONTAINER --> Media for MOBILE*/
+@media (max-width:992px) {
+    .most_popular_accommodation{
+        flex-wrap: wrap;
+        flex-direction:column-reverse;
+    }
+}
+
+@media (max-width:767px){
+    .most_popular_accommodation{
+        flex-wrap: wrap;
+        flex-direction:column-reverse;
+        padding: 0;
+    }
+}
+
+
+/*Accommodation --> CARD container*/
+.accommodation_list{
+    max-width: 950px;
+    padding: 1.5%;
+    background-color: rgb(242, 243, 244);
+    border-radius: 15px;
+    align-items: center;
+}
+/*Accommodation --> CARD container --> Media for MOBILE*/
+@media (max-width:767px){
+    .accommodation_list{
+        background-color: white;
+        width: 91%;
+        border-radius: 0;
+        align-items: center;
+        padding-left: 5%;
+    }
+}
+
+.accommodation_title p{
+    font-size: 22px;
+    font-weight: bold;
+    margin: 1.5% 0 2.5% 3%;
+}
+
+/*Accommodation  --> CARD --> Title --> Media for MOBILE*/
+@media (max-width:767px){
+    .accommodation_title p{
+    font-size: 20px;
+    margin: 10% 0 0 10%;
+    padding-bottom: 5%;
+    }
+}
+
+/*Accommodation --> CARD DESIGN*/
+.accommodation{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    row-gap: 40px;
+    margin-bottom: 1.8%;
+}
+
+.accommodation_card{
+    background-color: white;
+    border: 5px solid white;
+    border-radius: 15px;
+    height: 210px;
+    width: 230px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;    
+    position: relative;
+    transition: 0.5s;
+}
+
+.accommodation_card:hover{ 
+    box-shadow: 0 8px 16px 0 rgba(99, 99, 99, 0.4);  
+}
+
+.accommodation_card a:link { 
+    text-decoration: none; 
+}
+
+.accommodation_card a:visited {
+     text-decoration: none;
+}
+
+/*Accommodation  --> CARD DESIGN --> Media for MOBILE*/
+@media (max-width:767px){
+    .accommodation_card{
+        position: relative;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; 
+        width: 100%;
+    }
+
+}
+
+.accommodation_card img {
+    height: 125px;
+    width: 255px;
+    object-fit: cover;
+	position: relative;
+    border-radius: 15px 15px 0 0;
+}
+
+.accommodation_hotel_name{
+    font-size: 16px;
+    font-weight: 700;
+    margin-left: 10px;
+    color: #000;
+    line-height: 25px;
+}
+
+
+.accommodation_price{
+    font-size: 14px;
+    margin-left: 10px;
+    color: #000;
+    line-height: 25px;
+}
+
+.starsRating{
+    font-size: smaller;
+    margin-left: 10px;
+    line-height: 25px;
+}
+
+.sOn i {
+    color:#0065FC;  
+}
+
+.sOff i {
+    color:#cccccc;
+}
+
+
+.accommodation_show_more{
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 2.5%;
+}
+
+
+/*Accommodation  --> CARD -->"Show More" --> Media for MOBILE*/
+@media (max-width:767px){
+    .accommodation_show_more{
+        font-size: 18px;
+        padding-top: 3%;
+    }
+}
+
+.accommodation_show_more a:link, .accommodation_show_more a:visited { 
+    text-decoration: none; 
+    color: black;
+}
+
+/*MOST POPULAR section*/
+/*MOST POPULAR --> CONTAINER*/
+.most_popular_list{
+    min-width: 415px;
+    background-color: rgb(242, 243, 244);
+    border-radius: 15px;
+    
+    position: relative;
+}
+/*Most Popular --> CONTAINER --> Media for MOBILE*/
+@media (max-width:767px){
+    .most_popular_list{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        min-width: 300px;
+        max-width: 380px;
+        border-radius: 0;
+        width: 100%;
+        background-color: rgb(242, 243, 244);
+        padding-bottom: 7%;
+    }
+}
+
+/*Most Popular --> CONTAINER --> Media for TABLET*/
+@media (max-width:992px) and (min-width:768px){
+    .most_popular_list{
+        width:100%;
+        padding-bottom: 20px;
+        bottom: 20px;
+    }
+}
+
+/*Most Popular --> TITLE*/
+.most_popular_title{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 8%;
+    gap: 45%;
+}
+
+/*Most Popular --> TITLE --> Media for TABLET*/
+@media (max-width:992px) and (min-width:768px){
+    .most_popular_title{
+        margin-left: 20%;
+        gap: 25%;
+    }
+}
+
+/*Most Popular --> TITLE --> Media for MOBILE*/
+@media (max-width:767px){
+    .most_popular_title{
+        gap: 35%;
+    }
+}
+
+.most_popular_title p{
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 10%;
+}
+
+.most_popular_title i{
+    float: right;
+}
+
+/*Most Popular --> CARD CONTAINER*/
+.most_popular_card_list{
+    display: flex;
+    flex-direction: column;
+    padding: 4% 0 0 2%;
+    justify-content: center;
+    align-items: center;
+    row-gap: 30px;
+}
+
+
+/*Most Popular --> CARD DESIGN*/
+.most_popular_card{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 350px;
+    height: auto;
+    border: solid white;
+    border-width: 5px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    position: relative;
+    transition: 0.5s;
+}
+
+.most_popular_card:hover{ 
+    box-shadow: 0 8px 16px 0 rgba(99, 99, 99, 0.4);  
+}
+
+/*Most Popular --> CARD DESIGN --> Media MOBILE*/
+@media (max-width:767px){
+    .most_popular_card{
+        max-width: 330px;
+        
+    }
+}
+
+.most_popular_card a:link, .most_popular_card a:visited { 
+    text-decoration: none; 
+    color: black;
+}
+
+.most_popular_card img{
+    height: 140px;
+    max-width: 130px;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+	position: relative;
+    float: left;
+    
+}
+
+.most_popular_hotel_name{
+    font-size: 16px;
+    font-weight: 700;
+    margin-left: 10px;
+    color: #000;
+    line-height: 25px;
+}
+
+.most_popular_price{
+    font-size: 14px;
+    margin-left: 10px;
+    color: #000;
+    line-height: 25px;
+}
+
+.most_popular_card_text{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    position: relative;
+    padding-top: 5%;
+}
+
+/*MAIN --> ACTIVITIES*/
+
+.activities_name {
+    padding-left: 50px;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+
+@media (max-width:767px){
+    .activities_name{
+        padding: 5% 0 5% 20%;
+        
+    }
+}
+
+.activities_list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding:0 50px 30px 50px;
+    row-gap: 15px;
+}
+
+@media (max-width:767px){
+    .activities_list{
+        width: 90%;
+        margin: 0 0 4% 4%;
+    }
+}
+
+.activities_section_1{
+    border-radius: 15px ;
+    height: 445px;
+    width: 300px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: 0.5s;    
+}
+.activities_section_1:hover{
+    box-shadow: 0 8px 16px 0 rgba(99, 99, 99, 0.4);
+}   
+  
+
+.activities_section_1 p{
+    margin: 15px;
+    font-weight: bolder;
+}
+
+.activities_section_1 img {
+    height: 388px;
+    width: 200px;
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+	position: relative;
+    
+}
+
+.activities_section_2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 445px;
+    width: 300px;
+}
+
+/*Activities --> section 2 --> Media for MOBILE*/
+@media (max-width:768px){
+    .activities_section_2{
+        gap: 15px;
+        border-radius: 15px;
+    }
+}
+
+.activity_2 {
+    border-radius: 15px;
+    height: 235px;
+    width: 300px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: 0.5s;
+}
+
+.activity_2:hover{
+    box-shadow: 0 8px 16px 0 rgba(99, 99, 99, 0.4);
+} 
+
+.activity_2 p{
+    margin: 15px;
+    font-weight: bolder;
+}
+
+.activity_2 img{
+    height: 180px;
+    border-radius: 15px 15px 0 0;
+    width: 200px;
+    object-fit: cover;
+	position: relative;
+}
+
+.activity_3{
+    border-radius: 15px ;
+    height: 165px;
+    width: 300px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: 0.5s;
+}
+
+.activity_3:hover{
+    box-shadow: 0 8px 16px 0 rgba(99, 99, 99, 0.4);
+} 
+
+.activity_3 p{
+    margin: 15px;
+    font-weight: bolder;
+}
+
+.activity_3 img{
+    height: 110px;
+    border-radius: 15px 15px 0 0;
+    width: 200px;
+    object-fit: cover;
+	position: relative;
+}
+
+
+.activities_section_3{
+    border-radius: 15px ;
+    height: 445px;
+    width: 300px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: 0.5s;
+}
+
+.activities_section_3:hover{
+    box-shadow: 0 8px 16px 0 rgba(99, 99, 99, 0.4);
+} 
+
+.activities_section_3 p{
+    margin: 15px;
+    font-weight: bolder;
+}
+
+.activities_section_3 img {
+    height: 388px;
+    border-radius: 15px 15px 0 0;
+    width: 200px;
+    object-fit: cover;
+	position: relative;
+    
+}
+
+.activities_section_4{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 445px;
+    width: 300px;
+
+}
+
+/*Activities --> section 4 --> Media for MOBILE*/
+@media (max-width:768px){
+    .activities_section_4{
+        gap: 15px;
+        border-radius: 15px;
+    }
+}
+
+.activity_5{
+    border-radius: 15px ;
+    height: 165px;
+    width: 300px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: 0.5s;
+}
+
+.activity_5:hover{
+    box-shadow: 0 8px 16px 0 rgba(99, 99, 99, 0.4);
+} 
+
+.activity_5 p{
+    margin: 15px;
+    font-weight: bolder;
+}
+
+.activity_5 img{
+    height: 110px;
+    border-radius: 15px 15px 0 0;
+    width: 200px;
+    object-fit: cover;
+	position: relative;
+}
+
+.activity_6 {
+    border-radius: 15px;
+    height: 235px;
+    width: 300px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: 0.5s;
+
+}
+
+.activity_6:hover{
+    box-shadow: 0 8px 16px 0 rgba(99, 99, 99, 0.4);
+}
+
+.activity_6 p{
+    margin: 15px;
+    font-weight: bolder;
+}
+
+.activity_6 img{
+    height: 180px;
+    border-radius: 15px 15px 0 0;
+    width: 200px;
+    object-fit: cover;
+	position: relative;
+}
+
+.activities_list a:link, .activities_list a:visited { 
+    text-decoration: none; 
+    color: black;
+}
+
+/*Activities --> ALL SECTIONS --> Media for MOBILE*/
+@media (max-width:767px){
+    .activities_list{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        padding:2%;
+    }
+
+    .activities_section_1, .activities_section_2, 
+    .activities_section_3, .activities_section_4{
+        height:auto;
+        width: auto;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+    }
+
+    .activity_1, .activity_2 , .activity_3 , .activity_4 , 
+    .activity_5 , .activity_6 {
+        border-radius: 15px;
+        height: 215px;
+        width: 100%;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+
+
+    .activity_1 img, .activity_2 img, .activity_3 img, .activity_4 img, 
+    .activity_5 img, .activity_6 img {
+        height: 150px;
+        border-radius: 15px 15px 0 0;
+        width: 100%;
+        object-fit: cover;
+        position: relative;
+    }
+
+}
+
+/*FOOTER*/
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: rgb(242, 243, 244);
+    text-align: left;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    gap: 15%;
+}
+
+/*FOOTER --> MEDIA FOR TABLET*/
+@media (max-width:992px) and (min-width:768px){
+    .footer{
+        flex-wrap: nowrap;
+        gap: 5%;
+    }
+}
+
+
+.footer_about>p, .footer_accommodations>p, .footer_assistance>p {
+    font-weight: bold;
+    padding: 50px 50px 10px 50px;
+    font-size: 17px;
+}
+
+.footer_about>ul, .footer_accommodations>ul, .footer_assistance>ul{
+    list-style: none;
+    color: inherit;
+    line-height: 30px; 
+    padding: 0px 50px 50px 50px ;  
+    font-size: 17px;
+}
+
+.footer_about ul a, .footer_accommodations ul a, .footer_assistance ul a {
+    color:inherit;
+    text-decoration:none;
+    
+}
+.footer_about ul a:hover, .footer_accommodations ul a:hover, .footer_assistance ul a:hover {
+    opacity:0.5;
+}
+
